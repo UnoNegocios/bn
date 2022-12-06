@@ -24,6 +24,11 @@ return new class extends Migration
             $table->string('duration')->nullable();
             $table->string('duration_in_seconds')->nullable();
             $table->string('permalink', 2048)->nullable();
+            $table->string('status')->nullable();
+            $table->json('category_ids')->nullable();
+            $table->string('playback_id')->nullable();
+            $table->string('file_path', 2048)->nullable();
+
             $table->timestamps();
         });
     }
